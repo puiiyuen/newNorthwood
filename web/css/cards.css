@@ -11,9 +11,16 @@ body {
     margin-top: 100px;
     font-size: 25px;
     background: linear-gradient(132deg, #F09459, #e66586);
-    background-size: 400% 400%;
+    /*background-size: 400% 400%;*/
+
+    background-size: 100% 100%;
     animation: BackgroundGradient 30s ease infinite;
 }
+
+/*link style by Patrick*/
+a{text-decoration: none;
+    color: #fff;}
+/*link style*/
 
 @keyframes BackgroundGradient{
     0% {background-position:0% 50%;}
@@ -126,7 +133,7 @@ body {
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    height:160px;
+    height:330px;
     line-height:5em;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
@@ -158,40 +165,40 @@ body {
 }
 */
 #card1{
-    background: linear-gradient(132deg, #F09459, #e66586);
-    color: white;
-}
+      background: linear-gradient(132deg, #c4d4ed, #133a75);
+      color: white;
+  }
 
 #card2{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #63d39d, #127545);
     color: white;
 }
 
 #card3{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #f1d4f9, #bc56d8);
     color: white;
 }
 
 #card4{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #96cacc, #48c0c4);
     color: white;
 }
 
 #card5{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #8c554b, #843223);
     color: white;
 }
 
 #card6{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #a2c683, #67ad2b);
     color: white;
 }
 #card7{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #4c4f77, #0b1170);
     color: white;
 }
 #card8{
-    background: linear-gradient(132deg, #F09459, #e66586);
+    background: linear-gradient(132deg, #8e4785, #6b025d);
     color: white;
 }
 /**
