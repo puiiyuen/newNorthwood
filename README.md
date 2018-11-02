@@ -27,7 +27,7 @@ web/user/register.jsp</br>
 3. Please save all web page in .jsp type</br>
 When you finish your html page, just modify the suffix name from .html to .jsp</br>
 .jsp file is better for our server-side work</br>
-</br>
+
 **Any questions about upload files, feel free to ask me**</br>
 
 Patrick Peiyuan Chen:)
