@@ -2,7 +2,7 @@
 New repository for northwood project
 
 # Here are some tips about classify files
-1. For Java codes</br>
+1. **For Java codes**</br>
 src/com/[packageName]/.java</br>
 This folder is for saving java source code.</br>
 e.g. Now we have a food feedback system</br>
@@ -11,7 +11,7 @@ src/com/foodFeedback/menu.java</br>
 src/com/foodFeedback/comment.java</br>
 ...</br>
 
-2. For web page</br>
+2. **For web page**</br>
 web/[featureName]/.jsp</br>
 web/[featureName]/css/.css</br>
 web/[featureName]/img/{.jpg/.png/.gif}</br>
@@ -24,7 +24,7 @@ web/user/css/bootstrap.css</br>
 web/user/register.jsp</br>
 ...</br>
 
-3. Please save all web page in .jsp type</br>
+3. **Please save all web page in .jsp type**</br>
 When you finish your html page, just modify the suffix name from .html to .jsp</br>
 .jsp file is better for our server-side work</br>
 
