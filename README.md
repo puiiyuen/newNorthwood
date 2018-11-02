@@ -2,31 +2,32 @@
 New repository for northwood project
 
 # Here are some tips about classify files
-1. For Java codes
-src/com/[packageName]/.java
-This folder is for saving java source code.
-e.g. Now we have a food feedback system
-Then, we should create a package for this feature like
-src/com/foodFeedback/menu.java
-src/com/foodFeedback/comment.java
-...
-
-2. For web page
-web/[featureName]/.jsp
-web/[featureName]/css/.css
-web/[featureName]/img/{.jpg/.png/.gif}
-This folder is for saving anything about front-end web pages
-e.g. Now we have user login, register,etc.. We call this fetuare is about "user"
-so we have
-web/user/login.jsp
-web/user/css/bootstrap.css
-web/user/register.jsp
-...
-
-3. Please save all web page in .jsp type
-When you finish your html page, just modify the suffix name from .html to .jsp
-.jsp file is better for our server-side work
-
-**Any questions about upload files, feel free to ask me**
+1. For Java codes</br>
+src/com/[packageName]/.java</br>
+This folder is for saving java source code.</br>
+e.g. Now we have a food feedback system</br>
+Then, we should create a package for this feature like</br>
+src/com/foodFeedback/menu.java</br>
+src/com/foodFeedback/comment.java</br>
+...</br>
+</br>
+2. For web page</br>
+web/[featureName]/.jsp</br>
+web/[featureName]/css/.css</br>
+web/[featureName]/img/{.jpg/.png/.gif}</br>
+This folder is for saving anything about front-end web pages</br>
+e.g. Now we have user login, register,etc.. We call this fetuare is about "user"</br>
+so we have</br>
+web/user/login.jsp</br>
+web/user/login.jsp</br>
+web/user/css/bootstrap.css</br>
+web/user/register.jsp</br>
+...</br>
+</br>
+3. Please save all web page in .jsp type</br>
+When you finish your html page, just modify the suffix name from .html to .jsp</br>
+.jsp file is better for our server-side work</br>
+</br>
+**Any questions about upload files, feel free to ask me**</br>
 
 Patrick Peiyuan Chen:)
