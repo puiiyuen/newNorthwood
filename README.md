@@ -10,7 +10,7 @@ Then, we should create a package for this feature like</br>
 src/com/foodFeedback/menu.java</br>
 src/com/foodFeedback/comment.java</br>
 ...</br>
-</br>
+
 2. For web page</br>
 web/[featureName]/.jsp</br>
 web/[featureName]/css/.css</br>
@@ -23,7 +23,7 @@ web/user/login.jsp</br>
 web/user/css/bootstrap.css</br>
 web/user/register.jsp</br>
 ...</br>
-</br>
+
 3. Please save all web page in .jsp type</br>
 When you finish your html page, just modify the suffix name from .html to .jsp</br>
 .jsp file is better for our server-side work</br>
