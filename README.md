@@ -13,7 +13,6 @@ src/com/foodFeedback/comment.java</br>
 ...</br>
 
 2. **For web page**</br>
->>>>>>> parent of 1b16c6f... Front End CSS and JSP pages
 web/[featureName]/.jsp</br>
 web/[featureName]/css/.css</br>
 web/[featureName]/img/{.jpg/.png/.gif}</br>
@@ -27,7 +26,6 @@ web/user/register.jsp</br>
 ...</br>
 
 3. **Please save all web page in .jsp type**</br>
->>>>>>> parent of 1b16c6f... Front End CSS and JSP pages
 When you finish your html page, just modify the suffix name from .html to .jsp</br>
 .jsp file is better for our server-side work</br>
 
