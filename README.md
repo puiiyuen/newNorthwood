@@ -2,11 +2,8 @@
 New repository for northwood project
 
 # Here are some tips about classify files
-<<<<<<< HEAD
-1. For Java codes</br>
-=======
+
 1. **For Java codes**</br>
->>>>>>> parent of 1b16c6f... Front End CSS and JSP pages
 src/com/[packageName]/.java</br>
 This folder is for saving java source code.</br>
 e.g. Now we have a food feedback system</br>
@@ -15,9 +12,6 @@ src/com/foodFeedback/menu.java</br>
 src/com/foodFeedback/comment.java</br>
 ...</br>
 
-<<<<<<< HEAD
-2. For web page</br>
-=======
 2. **For web page**</br>
 >>>>>>> parent of 1b16c6f... Front End CSS and JSP pages
 web/[featureName]/.jsp</br>
@@ -32,9 +26,6 @@ web/user/css/bootstrap.css</br>
 web/user/register.jsp</br>
 ...</br>
 
-<<<<<<< HEAD
-3. Please save all web page in .jsp type</br>
-=======
 3. **Please save all web page in .jsp type**</br>
 >>>>>>> parent of 1b16c6f... Front End CSS and JSP pages
 When you finish your html page, just modify the suffix name from .html to .jsp</br>
