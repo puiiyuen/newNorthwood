@@ -1,6 +1,8 @@
 # newNorthwood
 New repository for northwood project
 
+# At the first time to up load the code, please create a new branch first:)
+
 # Here are some tips about classify files
 
 1. **For Java codes**</br>
