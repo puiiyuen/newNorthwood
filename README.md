@@ -22,7 +22,6 @@ This folder is for saving anything about front-end web pages</br>
 e.g. Now we have user login, register,etc.. We call this fetuare is about "user"</br>
 so we have</br>
 web/user/login.jsp</br>
-web/user/login.jsp</br>
 web/user/css/bootstrap.css</br>
 web/user/register.jsp</br>
 ...</br>
