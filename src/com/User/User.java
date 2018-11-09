@@ -1,5 +1,7 @@
 package com.User;
 
+import com.database.ConnectDatabase;
+
 public class User {
     private String username;
     private String email;
@@ -43,5 +45,15 @@ public class User {
             return "NO password";
     }
 
+
+    public void getUserInfoInDB(String status,String email)
+    {
+        if(status.equals("LogSuccess"))
+        {
+            ConnectDatabase con=new ConnectDatabase();
+            con.toConnectDatabase();
+
+        }
+    }
 
 }

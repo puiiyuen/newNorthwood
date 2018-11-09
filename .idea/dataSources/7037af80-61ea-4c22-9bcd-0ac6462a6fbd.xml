@@ -912,26 +912,32 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="229" parent="4" name="userinfo"/>
-    <column id="230" parent="229" name="username">
+    <table id="229" parent="4" name="loginstatus"/>
+    <table id="230" parent="4" name="userinfo"/>
+    <column id="231" parent="229" name="loginuser">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="232" parent="230" name="username">
       <Position>1</Position>
       <DataType>varchar(10)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="231" parent="229" name="passwd">
+    <column id="233" parent="230" name="passwd">
       <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(300)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="229" name="email">
+    <column id="234" parent="230" name="email">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="233" parent="229" name="PRIMARY">
+    <key id="235" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <Primary>1</Primary>

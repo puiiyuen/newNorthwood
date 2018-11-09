@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page errorPage="../jsp/error.jsp" %>
+<%@ page errorPage="../error.jsp" %>
 <!doctype html>
 <html>
 <head>
@@ -32,7 +32,7 @@
     %>
     <h1 align="center">Hope see you again! <%out.print(status);%></h1>
     <h2 align="center"><a href="login.html">Login Again</a></h2>
-    <h2 align="center"><a href="../index.html">Back to Home</a></h2>
+    <h2 align="center"><a href="../index.jsp">Back to Home</a></h2>
     <%
         }
     %>
