@@ -77,13 +77,13 @@
         }
         else if (logUser!=null)
         {
-            response.setHeader("REFRESH","0;URL=../index.jsp");
+            response.sendRedirect("../index.jsp");
         }
         else
         {
             if(userLogin.login(email,password)){
                 session.setAttribute("LogSuccess",email);   //Register email on session to make user status active
-                response.setHeader("REFRESH","0;URL=../index.jsp");
+                response.sendRedirect("../index.jsp");
             }
             else{
     %>

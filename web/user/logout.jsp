@@ -5,7 +5,7 @@
   Time: 17:23
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ page errorPage="../error.jsp" %>
 <!doctype html>
 <html>
@@ -19,16 +19,14 @@
     </style>
 </head>
 <body>
-    <jsp:useBean id="logoutUser" scope="session" class="com.User.Login"/>
     <%
         String status=(String)session.getAttribute("LogSuccess");
         if (status==null){
             //user didn't login
-            response.sendRedirect("../index.html");
+            response.sendRedirect("../index.jsp");
         }
         else{
             session.invalidate();
-            logoutUser.logout(status);
     %>
     <h1 align="center">Hope see you again! <%out.print(status);%></h1>
     <h2 align="center"><a href="login.html">Login Again</a></h2>

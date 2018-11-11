@@ -63,55 +63,69 @@ Mohammed Ali Khan (A00415590)
             ================== TAble for feedback =============================
         -->
 
-        <% //String date = request.getParameter("date");
-            fetchMenu menu =new fetchMenu();
-            String[] getMenu=menu.menu("Monday");
 
-        %>
-
-
-        <table id = "table" align="center" width= "device-width">
-            <tr> 
-                <th>Food Item</th> 
-                <th> Like it</th> 
-                <th> Dislike it</th> 
-                <th> Want More Often</th> 
-            </tr>
-
-            <%for (int i=0;i<getMenu.length;i++)
-            {
+        <form action="submit.jsp" method="post">
+            <% //String date = request.getParameter("date");
+                fetchMenu menu =new fetchMenu();
+                String[] getMenu=menu.menu("Monday");
 
             %>
 
-            <tr> 
-                <td><%=getMenu[i]%></td>
-                <td>  <input type="radio" name="pizza" value="like"></td> 
-                <td> <input type="radio" name="pizza" value="dislike"></td> 
-                <td> <input type="radio" name="pizza" value="more"></td> 
-            </tr>
 
-            <%
-            }
-            %>
+            <table id = "table" align="center" width= "device-width">
+                <tr>
+                    <th>Food Item</th>
+                    <th> Like it</th>
+                    <th> Dislike it</th>
+                    <th> Want More Often</th>
+                </tr>
 
-        
-        </table>
-        
-        <br><br>
-        
-        <!--
-        
+                <%for (int i=0;i<getMenu.length;i++)
+                {
+
+                %>
+
+                <tr>
+                    <td><%=getMenu[i]%></td>
+                    <td>  <input type="radio" name="<%=getMenu[i]%>" value="like"></td>
+                    <td> <input type="radio" name="<%=getMenu[i]%>" value="dislike"></td>
+                    <td> <input type="radio" name="<%=getMenu[i]%>" value="more"></td>
+                </tr>
+
+                <%
+                    }
+                %>
+
+
+
+            </table>
+
+            <br><br>
+
+            <!--
+
             =====================  Text box =====================
+
+            -->
+
+
+            <div align = "center">
+                <label for="feedback">Tell Northwood about your food :</label>
+                <input type="text" id="feedback" name="feedback"
+                       placeholder="    Write Feedback ....">
+                <br>
+                <input type="submit" value="Submit">
+
+            </div>
+
+
+        </form>
+
+
         
-        -->
-        <div align = "center">
-            <label for="feedback">Tell Northwood about your food :</label>
-            <input type="text" id="feedback" name="feedback" 
-                   placeholder="    Write Feedback ....">
-            <br>
-            <input type="submit" value="Submit">
-            
-        </div>
+
+        
+
         
         
         

@@ -73,9 +73,11 @@
     </div>
 
     <div class="column">
-        <div class="card" id='card4' >
-            <h3>Food</h3>
-        </div>
+        <a href="food-feedback/food_feedback.jsp">
+            <div class="card" id='card4' >
+                <h3>Food</h3>
+            </div>
+        </a>
     </div>
 </div>
 
