@@ -8,10 +8,10 @@ function isEmptyField()
             day = document.getElementById("day").value;
 
     if (foodName === "") {
-        alert("First Name Connot Be Empty");
+        alert("Food Item Cann't Be Empty");
         isEmpty = true;
     } else if (day === "") {
-        alert("Last Name Connot Be Empty");
+        alert("Day Cann't Be Empty");
         isEmpty = true;
     }
 
