@@ -7,8 +7,6 @@ public class ConnectDatabase {
 
     private Connection con=null;
 
-    public Logger logger=Logger.getLogger("ConnectDatabase");
-
     public boolean toConnectDatabase(){
         String JDriver = "com.mysql.jdbc.Driver";
         String conURL = "jdbc:mysql://localhost:3306/northwood";
@@ -22,6 +20,7 @@ public class ConnectDatabase {
         try{
             con=DriverManager.getConnection(conURL,"root","root123");
         }catch (SQLException sql_e){
+            System.out.println("Connect database failed");
             return false;
         }
         return true;

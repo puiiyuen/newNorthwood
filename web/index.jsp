@@ -7,13 +7,14 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page errorPage="error.jsp" %>
+<%@ page import="com.User.User" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Personal Assistant</title>
-    <link rel="stylesheet" href="index/css/cards.css">
+    <link rel="stylesheet" href="index/css/index.css">
     <link rel="stylesheet" href="public_css/font-awesome.min.css">
 
 </head>
@@ -22,6 +23,28 @@
 
 <body>
 
+<%
+    String logStatus = (String) session.getAttribute("LogSuccess");
+    String log, reg, username;
+    String logLink, regLink;
+
+    User user = new User();
+
+    if (logStatus == null) {
+        log = "Log in";
+        logLink = "user/login.jsp";
+        regLink = "user/register.jsp";
+        username = "";
+        reg = "Register";
+    } else {
+        logLink = "user/logout.jsp";
+        log = "Log out";
+        regLink = "#";
+        username = user.getUsernameInDB(logStatus)[0];
+        reg = "Flip Game";
+    }
+
+%>
 
 <header>
     <div class="nav">
@@ -29,7 +52,8 @@
             <li><a href="index.jsp">Home</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="user/login.jsp">Login</a></li>
+            <li><a href="<%=logLink%>"><%=log%>
+            </a></li>
         </ul>
     </div>
 </header>
@@ -44,37 +68,41 @@
 </div>
 -->
 <div class="msg">
-    <h1>Welcome To HELLEN</h1>
+    <h1><%=username%>
+    </h1>
+    <h1>Welcome To GeniusHub</h1>
 </div>
 
 <!-- <p>Resize the browser window to see the effect.</p> */ -->
 
 <div class="row">
     <div class="column">
-        <a href="user/login.jsp">
-            <div class="card" id = 'card1'>
-                <h3>Login</h3>
+        <a href="<%=logLink%>">
+            <div class="card" id='card1'>
+                <h3><%=log%>
+                </h3>
             </div>
         </a>
     </div>
 
     <div class="column">
-        <a href="user/register.jsp">
+        <a href="<%=regLink%>">
             <div class="card" id='card2'>
-                <h3>Register</h3>
+                <h3><%=reg%>
+                </h3>
             </div>
         </a>
     </div>
 
     <div class="column">
         <div class="card" id='card3'>
-            <h3>Flip Game</h3>
+            <h3>Deep Breath</h3>
         </div>
     </div>
 
     <div class="column">
         <a href="food-feedback/food_feedback.jsp">
-            <div class="card" id='card4' >
+            <div class="card" id='card4'>
                 <h3>Food</h3>
             </div>
         </a>
@@ -84,7 +112,7 @@
 <div class="row">
     <div class="column">
         <div class="card" id='card5'>
-            <h3>Deep Breath</h3>
+            <h3>Option 0</h3>
         </div>
     </div>
 
@@ -101,11 +129,9 @@
     </div>
 
     <div class="column">
-        <a href="user/logout.jsp">
-            <div class="card" id='card8'>
-                <h3>Logout</h3>
-            </div>
-        </a>
+        <div class="card" id='card8'>
+            <h3>Option 3</h3>
+        </div>
     </div>
 </div>
 

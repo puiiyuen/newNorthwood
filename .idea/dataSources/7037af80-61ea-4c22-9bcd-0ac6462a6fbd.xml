@@ -1006,41 +1006,46 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="250" parent="232" name="PRIMARY">
+    <column id="250" parent="232" name="type">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="251" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="251" parent="233" name="dish_id">
+    <column id="252" parent="233" name="dish_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="233" name="like_dish">
+    <column id="253" parent="233" name="like_dish">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="233" name="dislike_dish">
+    <column id="254" parent="233" name="dislike_dish">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="233" name="want_more_dish">
+    <column id="255" parent="233" name="want_more_dish">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="255" parent="233" name="PRIMARY">
+    <key id="256" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>dish_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="256" parent="233" name="vote_result_menu_ID_fk">
+    <foreign-key id="257" parent="233" name="vote_result_menu_ID_fk">
       <ColNames>dish_id</ColNames>
       <RefSchemaName>northwood</RefSchemaName>
       <RefTableName>menu</RefTableName>

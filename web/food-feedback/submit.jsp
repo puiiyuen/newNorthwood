@@ -16,37 +16,47 @@
 <body>
 
 
-
 <%
-    fetchMenu menu =new fetchMenu();
-    String[] getMenu=menu.menu("Monday");
-    String[] dishId=menu.dishId("Monday");
 
-    int[] vote=new int[getMenu.length];
-
-    for (int i=0;i<getMenu.length;i++)
-    {
-        String dish=request.getParameter(getMenu[i]);
-
-        if(dish.equals("like"))
-            vote[i]=1;
-        else if(dish.equals("dislike"))
-            vote[i]=2;
-        else if(dish.equals("more"))
-            vote[i]=3;
-        else
-            vote[i]=0;
+    String userType = (String) session.getAttribute("userType");
+    if (session.getAttribute("LogSuccess") == null && userType != "user") {
+        session.setAttribute("ForwardURL", request.getRequestURI());
+        response.sendRedirect("../user/login.jsp");
     }
-    String fbContent=request.getParameter("feedback");
-    String userEmail=(String)session.getAttribute("LogSuccess");
 
-    submitFeedback sb=new submitFeedback();
-    sb.submit(userEmail,fbContent,vote,dishId);
+    if (session.getAttribute("LogSuccess") != null && userType == "admin")
+        response.sendRedirect("../admin");
+
+    fetchMenu menu = new fetchMenu();
+    String[] getMenu = menu.dailyMenu("Monday");
+    String[] dishId = menu.dishId("Monday");
+
+    int[] vote = new int[getMenu.length];
+
+    for (int i = 0; i < getMenu.length; i++) {
+        String dish = request.getParameter(getMenu[i]);
+
+        if (dish.equals("like"))
+            vote[i] = 1;
+        else if (dish.equals("dislike"))
+            vote[i] = 2;
+        else if (dish.equals("more"))
+            vote[i] = 3;
+        else
+            vote[i] = 0;
+    }
+    String fbContent = request.getParameter("feedback");
+    String userEmail = (String) session.getAttribute("LogSuccess");
+
+    submitFeedback sb = new submitFeedback();
+    sb.submit(userEmail, fbContent, vote, dishId);
 
 %>
 
 <h1 align="center">Thanks for your feedback</h1>
 <h2 align="center"><a href="../index.jsp">Back to Home</a></h2>
-
+<%
+    response.setHeader("Refresh","1;url=../update-menu.jsp");
+%>
 </body>
 </html>
