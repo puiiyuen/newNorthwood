@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="com.foodFeedback.fetchMenu" %>
 <%@ page import="com.foodFeedback.submitFeedback" %>
+<%@ page import="java.util.Calendar" %>
 
 <html>
 <head>
@@ -25,11 +26,42 @@
     }
 
     if (session.getAttribute("LogSuccess") != null && userType == "admin")
-        response.sendRedirect("../admin");
+        response.sendRedirect("../admin/update-menu.jsp");
 
     fetchMenu menu = new fetchMenu();
-    String[] getMenu = menu.dailyMenu("Monday");
-    String[] dishId = menu.dishId("Monday");
+    int todayInt;
+    String today;
+    Calendar now = Calendar.getInstance();
+    todayInt = now.get(Calendar.DAY_OF_WEEK);
+    switch (todayInt) {
+        case Calendar.MONDAY:
+            today = "Monday";
+            break;
+        case Calendar.TUESDAY:
+            today = "Tuesday";
+            break;
+        case Calendar.WEDNESDAY:
+            today = "Wednesday";
+            break;
+        case Calendar.THURSDAY:
+            today = "Thursday";
+            break;
+        case Calendar.FRIDAY:
+            today = "Friday";
+            break;
+        case Calendar.SATURDAY:
+            today = "Saturday";
+            break;
+        case Calendar.SUNDAY:
+            today = "Sunday";
+            break;
+        default:
+            today = "Weekday";
+            break;
+    }
+    String[] getMenu = menu.dailyMenu(today);
+
+    String[] dishId = menu.dishId(today);
 
     int[] vote = new int[getMenu.length];
 
@@ -56,7 +88,7 @@
 <h1 align="center">Thanks for your feedback</h1>
 <h2 align="center"><a href="../index.jsp">Back to Home</a></h2>
 <%
-    response.setHeader("Refresh","1;url=../update-menu.jsp");
+    response.setHeader("Refresh","1;url=../index.jsp");
 %>
 </body>
 </html>
