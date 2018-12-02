@@ -1,9 +1,11 @@
 package com.database;
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class ConnectDatabase {
 
-    Connection con=null;
+    private Connection con=null;
 
     public boolean toConnectDatabase(){
         String JDriver = "com.mysql.jdbc.Driver";
@@ -18,6 +20,7 @@ public class ConnectDatabase {
         try{
             con=DriverManager.getConnection(conURL,"root","root123");
         }catch (SQLException sql_e){
+            System.out.println("Connect database failed");
             return false;
         }
         return true;
@@ -77,5 +80,33 @@ public class ConnectDatabase {
         else
             return false;
     }
+
+
+    public String[] getItem(String query,String colLabel)
+    {
+
+        ArrayList<String> item=new ArrayList<>();
+
+        if(toConnectDatabase())
+        {
+            try {
+
+                Statement statement=con.createStatement();
+                ResultSet resultSet=statement.executeQuery(query);
+
+                while(resultSet.next())
+                {
+                    item.add(resultSet.getString(colLabel));
+                }
+                resultSet.first();
+                toCloseConnection();
+            }catch (SQLException sql_e)
+            {
+                System.out.println(sql_e.getMessage());
+            }
+        }
+        return item.toArray(new String[0]);
+    }
+
 
 }

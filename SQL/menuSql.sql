@@ -49,7 +49,7 @@ CREATE TABLE admin
 #import java.util.Date;
 # Date date = new Date();
 # Timestamp timeStamp = new Timestamp(date.getTime());
-INSERT INTO menu (content , Date) VALUES ('JAVA STRING2' , '2010-03-01 12:00:00');
+INSERT INTO menu (content , add_date) VALUES ('JAVA STRING2' , '2010-03-01 12:00:00');
 
 # ADD ADMIN INTO TABLE
 INSERT INTO admin (name, passwd ) VALUES ('JAVA STRING NAME' , 'JAVA STRING PASSWD');

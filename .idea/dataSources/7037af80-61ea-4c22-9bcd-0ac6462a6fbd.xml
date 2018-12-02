@@ -912,35 +912,144 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="229" parent="4" name="loginstatus"/>
-    <table id="230" parent="4" name="userinfo"/>
-    <column id="231" parent="229" name="loginuser">
+    <table id="229" parent="4" name="feedback"/>
+    <table id="230" parent="4" name="loginstatus"/>
+    <table id="231" parent="4" name="menu"/>
+    <table id="232" parent="4" name="userinfo"/>
+    <table id="233" parent="4" name="vote_result"/>
+    <column id="234" parent="229" name="user_email">
       <Position>1</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="230" name="username">
-      <Position>1</Position>
-      <DataType>varchar(10)|0s</DataType>
-      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    <column id="235" parent="229" name="fb_content">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="230" name="passwd">
+    <column id="236" parent="229" name="fb_time">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="237" parent="229" name="feedback_userinfo_email_fk">
+      <ColNames>user_email</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="238" parent="229" name="feedback_userinfo_email_fk">
+      <ColNames>user_email</ColNames>
+      <RefSchemaName>northwood</RefSchemaName>
+      <RefTableName>userinfo</RefTableName>
+      <RefColNames>email</RefColNames>
+    </foreign-key>
+    <column id="239" parent="230" name="loginuser">
+      <Position>1</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="240" parent="231" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="231" name="content">
       <Position>2</Position>
       <DataType>varchar(300)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="230" name="email">
+    <column id="242" parent="231" name="add_date">
+      <Position>3</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="231" name="Day">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="244" parent="231" name="menu_ID_uindex">
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="245" parent="231" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="246" parent="231" name="menu_ID_uindex">
+      <ColNames>ID</ColNames>
+      <UnderlyingIndexName>menu_ID_uindex</UnderlyingIndexName>
+    </key>
+    <column id="247" parent="232" name="username">
+      <Position>1</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="248" parent="232" name="passwd">
+      <Position>2</Position>
+      <DataType>varchar(300)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="232" name="email">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="235" parent="230" name="PRIMARY">
+    <column id="250" parent="232" name="type">
+      <Position>4</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="251" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="252" parent="233" name="dish_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="253" parent="233" name="like_dish">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="233" name="dislike_dish">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="255" parent="233" name="want_more_dish">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="256" parent="233" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>dish_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="257" parent="233" name="vote_result_menu_ID_fk">
+      <ColNames>dish_id</ColNames>
+      <RefSchemaName>northwood</RefSchemaName>
+      <RefTableName>menu</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
   </database-model>
 </dataSource>
