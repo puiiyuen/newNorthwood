@@ -95,9 +95,11 @@
     </div>
 
     <div class="column">
-        <div class="card" id='card3'>
-            <h3>Deep Breath</h3>
-        </div>
+        <a href="DeepBreath-master/etc/heartMain.html">
+            <div class="card" id='card3'>
+                <h3>Deep Breath</h3>
+            </div>
+        </a>
     </div>
 
     <div class="column">
