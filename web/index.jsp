@@ -4,6 +4,11 @@
   Date: 2018-11-03
   Time: 16:12
   To change this template use File | Settings | File Templates.
+  
+  Index 43: Welcome page – complexity 8
+As a resident I would like a friendly/easy to use welcome page so that I can feel confident to use the app
+Given a user visits the app when they click on a card then they are taken to the page they wanted. 
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page errorPage="error.jsp" %>
