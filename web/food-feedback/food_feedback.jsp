@@ -4,6 +4,16 @@
 <%--
 * Modify by Patrick Peiyuan Chen
 * Connect Client-Side to Server
+
+Story: Menu Fetch - Index 62 - Complexity 4 
+As a Server-Side Developer, I want to connect the database to the client side so that residents can see the menu options on the feedback form. 
+Given the food feedback page to the resident when they view the page their menu options are loaded then they can vote.
+
+
+Story: Residents’ response - Index 63 - Complexity 4 
+As a Server-Side Developer, I want to connect the database to the client side so that the admin can get the residents’ votes and their feedback can be stored in the database. 
+Given the food feedback page to the resident when they vote on the menu page then their feedback can be stored in the database and shown to the admin. 
+
 --%>
 
 <!DOCTYPE html>
