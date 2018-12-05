@@ -1,6 +1,17 @@
 <%--
     Document:login
     Author: Peiyuan
+    
+    
+    Index 20: Easy Login – complexity 8
+As a resident I want an easy login system so that I can easily log into my account.
+Given a resident wants to log in when they arrive to the login page then it should be clear/simple to log in. 
+ 
+
+Index 41: Desktop Login UI -complexity 5
+As a developer I want a desktop version of a login page so that it can be used on pc platforms. 
+Given a resident with computer when they want to login on to the app then they can use the desktop login
+
 --%>
 
 <%@ page pageEncoding="utf-8" %>
