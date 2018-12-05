@@ -105,6 +105,11 @@ body {
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+/*Index 44: auto layout – complexity number 3 
+As a developer I want my website to have a fixed layout
+so that my web page will be responsive.
+Given any device when the user opens the app then the layout should look the same as the app on  any other device.  
+*/
 @media screen and (max-width: 500px) {
     .navbar a {
         float: none;
