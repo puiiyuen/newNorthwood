@@ -4,6 +4,11 @@
   Date: 2018-09-30
   Time: 13:46
   To change this template use File | Settings | File Templates.
+  
+  index 61: Register page – complexity 3
+As a dev I want a register page so that I can register for the app.
+Given a user wants to register for the app when they click the register card then they can register for app 
+
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page errorPage="../error.jsp" %>
