@@ -1,3 +1,11 @@
+/*
+As a server-side developer, I want to provide user login and register, so that residents can use their own account to do some operations (e.g. food feedback). 
+Index#: 42 User Login Server (59 Java EE 60 MySQL) 
+Complexity#: 8 
+*/
+
+//Login 
+
 package com.User;
 
 import java.io.UnsupportedEncodingException;
