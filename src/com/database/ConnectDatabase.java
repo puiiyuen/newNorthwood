@@ -1,3 +1,9 @@
+/*
+As a server-side developer, I want to provide user login and register, so that residents can use their own account to do some operations (e.g. food feedback). 
+Index#: 42 User Login Server (59 Java EE 60 MySQL) 
+Complexity#: 8 
+*/
+
 package com.database;
 import java.sql.*;
 import java.util.ArrayList;
@@ -6,10 +12,11 @@ import java.util.logging.Logger;
 public class ConnectDatabase {
 
     private Connection con=null;
-
+    
+    //connect database
     public boolean toConnectDatabase(){
-        String JDriver = "com.mysql.jdbc.Driver";
-        String conURL = "jdbc:mysql://localhost:3306/northwood";
+        String JDriver = "com.mysql.jdbc.Driver"; //Driver for Java connect MySQL
+        String conURL = "jdbc:mysql://localhost:3306/northwood"; //database address
 
         try{
             Class.forName(JDriver);
@@ -18,14 +25,15 @@ public class ConnectDatabase {
             return false;
         }
         try{
-            con=DriverManager.getConnection(conURL,"root","root123");
+            con=DriverManager.getConnection(conURL,"username","password"); //use your own username and password
         }catch (SQLException sql_e){
             System.out.println("Connect database failed");
             return false;
         }
         return true;
     }
-
+    
+    //close database
     public boolean toCloseConnection(){
         try{
             con.close();
@@ -34,7 +42,8 @@ public class ConnectDatabase {
             return false;
         }
     }
-
+    
+    //search function : search if the item exists
     public boolean search(String query,String idColName){
         if(toConnectDatabase())
         {
@@ -60,7 +69,9 @@ public class ConnectDatabase {
             return false;
 
     }
-
+    
+    
+    //insert function :insert item to database
     public boolean insert(String query){
         if(toConnectDatabase())
         {
@@ -81,7 +92,7 @@ public class ConnectDatabase {
             return false;
     }
 
-
+    //get item from database: return as a String array
     public String[] getItem(String query,String colLabel)
     {
 
