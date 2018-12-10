@@ -2,6 +2,9 @@
 As a server-side developer, I want to provide user login and register, so that residents can use their own account to do some operations (e.g. food feedback). 
 Index#: 42 User Login Server (59 Java EE 60 MySQL) 
 Complexity#: 8 
+
+****Before using database******
+1. Please use sql command in "SQL" folder to initialize the database first
 */
 
 package com.database;
