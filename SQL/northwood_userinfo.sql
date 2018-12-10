@@ -1,0 +1,10 @@
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('Patrick', 'YXNkZg==', 'patrickchenpy@gmail.com', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('Peiyuan', 'cXdlcnR5', 'peiyuan.chen@smu.ca', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('Terry', 'enhjdg==', 'terry@smu.ca', 'admin');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('emacleod', 'MjM0NXBhc3M=', 'emily_macleod@hotmail.com', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('Patrick', 'cXdlcnR5', 'patrick@gmail.com', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('JAK', 'OTU5NTk1', 'jak@gmail.com', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('macleod', 'cGFzc3dvcmQ=', 'emacleod88@gmail.com', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('td_barrett', 'dHJhdmVsbGU=', 'travellebarrett@gmail.com', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('travelle', 'dHJhdg==', 'travelle.barrett@smu.ca', 'user');
+INSERT INTO northwood.userinfo (username, passwd, email, type) VALUES ('travelle', 'SzFtb24zOTYh', 'jodyann_barrett@yahoo.com', 'user');
