@@ -30,6 +30,9 @@ web/user/register.jsp</br>
 When you finish your html page, just modify the suffix name from .html to .jsp</br>
 .jsp file is better for our server-side work</br>
 
+4. ****Before using database******
+Please use sql command in "SQL" folder to initialize the database first
+
 **Any questions about upload files, feel free to ask me**</br>
 
 Patrick Peiyuan Chen:)
