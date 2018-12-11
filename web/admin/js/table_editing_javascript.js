@@ -1,3 +1,10 @@
+/* 
+ * Developed by ... 
+ * Mohammed Ali Khan
+ * Index # 32
+ */
+
+
 var indexing = 1,
         table = document.getElementById("table");
 
