@@ -36,3 +36,10 @@ Please use sql command in "SQL" folder to initialize the database first
 **Any questions about upload files, feel free to ask me**</br>
 
 Patrick Peiyuan Chen:)
+
+...
+# To install the project
+1. clone the master branch of this project to your machine
+2. use any IDE (Intellij IDEA, Eclipse, Netbeans, etc.) to open this project (Recommend Intellij IDEA)
+3. export the project as a "war" package file
+4. (Based on Tomcat Server) upload the "war" file to "webapps" folder of the server and restart the server
